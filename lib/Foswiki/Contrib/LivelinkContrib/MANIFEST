@@ -1,0 +1,8 @@
+!noci
+data/System/LivelinkContrib.txt 0644
+lib/Foswiki/Contrib/LivelinkContrib.pm 0444
+pub/System/CKEditorPlugin/ckeditor/plugins/qwikilivelink/plugin.js 0444
+pub/System/CKEditorPlugin/ckeditor/plugins/qwikilivelink/icons/QwikiLivelink.png 0444
+pub/System/CKEditorPlugin/ckeditor/plugins/qwikilivelink/lang/de.js 0444
+pub/System/CKEditorPlugin/ckeditor/plugins/qwikilivelink/lang/en.js 0444
+pub/System/CKEditorPlugin/ckeditor/plugins/qwikilivelink/lang/fr.js 0444
