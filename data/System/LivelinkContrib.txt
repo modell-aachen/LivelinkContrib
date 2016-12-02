@@ -1,0 +1,79 @@
+%META:TOPICPARENT{name="CKEditorPlugin"}%
+---+ !LivelinkContrib %JQREQUIRE{"chili"}%
+
+%SHORTDESCRIPTION%
+
+%TOC%
+
+---++ Introduction
+!LivelinkContrib provides a simple [[CKEditorPlugin][CKEditor]] plugin called
+=qwikilivelink= to easily navigate to Livelink resources based on web mappings.
+
+---++ Installation
+!LivelinkContrib requires [[CKEditorPlugin]] to be installed and configured.
+To activate plugin =qwikilivelink= see the example editor configuration below as
+well as the plugin configuration itself.
+
+---++ Plugin Configuration
+---+++!! Toolbar Buttons
+=QwikiLivelink=
+
+---+++!! Configuration
+%ORANGE%
+*livelink_base_uri*
+%ENDCOLOR% ={String} [livelink_base_uri=""]= %BR%
+Base URL to !OpenText's Livelink.%BR%
+Placeholder =$ID= will be replaced with the according web ID set in
+=livelink_web_mappings=.%BR%
+%RED%Note:%ENDCOLOR% =qwikilivelink= *will disable itself if* =livelink_base_uri=
+*isn't set to a meaningful value*.
+<verbatim class="js">
+config.livelink_base_uri = "https://my.livelink.com/documents?id=$ID"
+</verbatim>
+%BR%
+
+%ORANGE%
+*livelink_web_mappings*
+%ENDCOLOR% ={Object} [livelink_web_mappings=null]= %BR%
+An object defining the mappings between Q.wiki's web names and Livelink's
+document IDs.%BR%
+%RED%Note:%ENDCOLOR% =qwikilivelink= *will disable itself if* =livelink_web_mappings=
+*isn't set to a meaningful value*.
+<verbatim class="js">
+config.livelink_web_mappings = {
+  "Main": "id_main",
+  "Main/Subweb": "id_main_subweb",
+  ...
+}
+</verbatim>
+%BR%
+
+---++ Example Editor Configuration
+<verbatim class="js">
+{
+  ...
+  "extraPlugins": "...,qwikilivelink,...",
+  "livelink_base_uri": "http://myserver.com?id=$ID",
+  "livelink_web_mappings": {
+    "Main": "id_main",
+    "Main/Subweb": "id_main_subweb"
+ },
+  "toolbar_MA": [
+      ...
+      {"name": "", "items": ["QwikiLivelink", ...]},
+      ...
+  ],
+  ...
+}
+</verbatim>
+%BR%
+
+
+---++ Info
+
+| Author: | Foswiki:Main.SvenMeyer |
+| Copyright: | 2016, Modell Aachen GmbH, All Rights Reserved |
+| License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+| Dependencies: | %$DEPENDENCIES% |
+| Version: | %$VERSION% |
+| Release: | %$RELEASE% |
