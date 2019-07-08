@@ -19,25 +19,25 @@ well as the plugin configuration itself.
 =QwikiLivelink=
 
 ---+++!! Configuration
-%ORANGE%
+%ORANGE{encode="none"}%
 *livelink_base_uri*
-%ENDCOLOR% ={String} [livelink_base_uri=""]= %BR%
+%ENDCOLOR{encode="none"}% ={String} [livelink_base_uri=""]= %BR%
 Base URL to !OpenText's Livelink.%BR%
 Placeholder =$ID= will be replaced with the according web ID set in
 =livelink_web_mappings=.%BR%
-%RED%Note:%ENDCOLOR% =qwikilivelink= *will disable itself if* =livelink_base_uri=
+%RED{encode="none"}%Note:%ENDCOLOR{encode="none"}% =qwikilivelink= *will disable itself if* =livelink_base_uri=
 *isn't set to a meaningful value*.
 <verbatim class="js">
 config.livelink_base_uri = "https://my.livelink.com/documents?id=$ID"
 </verbatim>
 %BR%
 
-%ORANGE%
+%ORANGE{encode="none"}%
 *livelink_web_mappings*
-%ENDCOLOR% ={Object} [livelink_web_mappings=null]= %BR%
+%ENDCOLOR{encode="none"}% ={Object} [livelink_web_mappings=null]= %BR%
 An object defining the mappings between Q.wiki's web names and Livelink's
 document IDs.%BR%
-%RED%Note:%ENDCOLOR% =qwikilivelink= *will disable itself if* =livelink_web_mappings=
+%RED{encode="none"}%Note:%ENDCOLOR{encode="none"}% =qwikilivelink= *will disable itself if* =livelink_web_mappings=
 *isn't set to a meaningful value*.
 <verbatim class="js">
 config.livelink_web_mappings = {
